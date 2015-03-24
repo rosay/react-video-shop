@@ -10,8 +10,7 @@ var VideoShop = React.createClass({
 
     getInitialState() {
         return {
-            search: this.props.search || "",
-            movies: this.props.movies
+            search: this.props.search || ""
         };
     },
 
@@ -26,7 +25,7 @@ var VideoShop = React.createClass({
     filterMovies () {
         var searchTerm = this.state.search.toLowerCase();
 
-        return this.state.movies.filter (function (movie) {
+        return this.props.movies.filter (function (movie) {
             return movie.title.toLowerCase().indexOf(searchTerm) != -1;
         });
     },
