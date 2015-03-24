@@ -1,11 +1,10 @@
 var React = require("react"),
-    Video = require("./video"),
-    ReactPropTypes = React.PropTypes;
+    Video = require("./video");
 
 var VideoShop = React.createClass({
     propTypes: {
-        search: ReactPropTypes.string,
-        movies: ReactPropTypes.array.isRequired
+        search: React.PropTypes.string,
+        movies: React.PropTypes.array.isRequired
     },
 
     getInitialState() {

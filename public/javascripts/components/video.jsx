@@ -1,12 +1,11 @@
-var React = require("react"),
-    ReactPropTypes = React.PropTypes;
+var React = require("react");
 
 var Video = React.createClass({
     propTypes: {
-        title: ReactPropTypes.string.isRequired,
-        director: ReactPropTypes.string.isRequired,
-        year: ReactPropTypes.number.isRequired,
-        genre: ReactPropTypes.string.isRequired
+        title: React.PropTypes.string.isRequired,
+        director: React.PropTypes.string.isRequired,
+        year: React.PropTypes.number.isRequired,
+        genre: React.PropTypes.string.isRequired
     },
 
     render: function() {
