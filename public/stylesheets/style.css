@@ -1,0 +1,42 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+#search {
+    margin-bottom: 10px;
+    font-size: medium;
+}
+
+table a:link {
+    color: #666;
+    font-weight: bold;
+    text-decoration:none;
+}
+
+table {
+    background:#eaebec;
+}
+
+table th {
+    padding:21px 25px 22px 25px;
+    background: #ededed;
+}
+
+table td {
+    padding:18px;
+    background: #fafafa;
+    text-align: left;
+}
+
+h2 {
+    display:inline-block;
+}
+
+.load-text {
+    color: lightslategray;
+}
