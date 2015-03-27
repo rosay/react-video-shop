@@ -1,16 +1,26 @@
 var React = require("react"),
-    Video = require("./video");
+    Video = require("./video"),
+    httpplease = require("httpplease");
 
 var VideoShop = React.createClass({
     propTypes: {
-        search: React.PropTypes.string,
-        movies: React.PropTypes.array.isRequired
+        search: React.PropTypes.string
     },
 
     getInitialState() {
         return {
             search: this.props.search || ""
         };
+    },
+
+    componentDidMount() {
+        var self = this;
+
+        httpplease({ method: 'GET', url: "http://localhost:3000/data/movies.json" }, function(err, response) {
+            self.setState({
+                movies: JSON.parse(response.body)
+            });
+        });
     },
 
     handleChange(event) {
@@ -23,8 +33,9 @@ var VideoShop = React.createClass({
 
     filterMovies () {
         var searchTerm = this.state.search.toLowerCase();
+        var movies = this.state.movies || [];
 
-        return this.props.movies.filter (function (movie) {
+        return movies.filter (function (movie) {
             return movie.title.toLowerCase().indexOf(searchTerm) != -1;
         });
     },

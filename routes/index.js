@@ -15,19 +15,16 @@ var React = require("react"),
 
 /* GET home page. */
 router.get('/', function(req, res) {
-    httpplease({ method: 'GET', url: "http://localhost:3000/data/movies.json" }, function(err, response) {
-        // Render server side content
-        var props = {
-            movies: JSON.parse(response.body),
-            params: req.query
-        };
 
-        var markup = React.renderToString(Stripmall(props));
+    var props = {
+        params: req.query
+    };
 
-        res.render('index', {
-            title: "The Video Shop",
-            markup: markup
-        });
+    var markup = React.renderToString(Stripmall(props));
+
+    res.render('index', {
+        title: "The Video Shop",
+        markup: markup
     });
 });
 
