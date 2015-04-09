@@ -7,7 +7,9 @@
   <body>
     <h1>{{title}}</h1>
     <div id="VideoStore">{{{markup}}}</div>
-
     <script src="bundle.js"></script>
+    <script type="text/javascript">
+      {{{script}}}
+    </script>
   </body>
 </html>

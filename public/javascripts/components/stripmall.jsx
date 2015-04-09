@@ -10,13 +10,13 @@ var Stripmall = React.createClass({
         var params = this.props.params || {};
 
         return {
-            search: params.search || "",
+            q: params.q || "",
             movies: this.props.movies
         };
     },
     render() {
         return (
-            <VideoShop movies={this.state.movies} search={this.state.search} />
+            <VideoShop movies={this.state.movies} search={this.state.q} />
         );
     }
 });
